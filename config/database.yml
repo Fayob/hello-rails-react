@@ -23,7 +23,9 @@ default: &default
 
 development:
   <<: *default
-  database: hello_rails_react_development
+  database: rails-react
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
